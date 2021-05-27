@@ -15,5 +15,5 @@ for item in $(oc get pods --field-selector status.phase=Running --selector $LABE
 	totalcpu=$(expr $totalcpu + $podcpuclean)
 done
 
-echo "Total memory consumed by JBoss EAP operator owned pods: ${totalmem}Mi"
-echo "Total CPU consumed by JBoss EAP operator owned pods: ${totalcpu}m" 
+echo "Total memory consumed by labled $LABEL pods: ${totalmem}Mi"
+echo "Total CPU consumed by labled $LABEL pods: ${totalcpu}m" 
